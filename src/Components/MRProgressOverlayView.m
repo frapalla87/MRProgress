@@ -75,8 +75,13 @@ static void *MRProgressOverlayViewObservationContext = &MRProgressOverlayViewObs
 
 + (instancetype)showOverlayAddedTo:(UIView *)view title:(NSString *)title mode:(MRProgressOverlayViewMode)mode animated:(BOOL)animated {
     MRProgressOverlayView *overlayView = [self new];
+<<<<<<< HEAD
     [overlayView setMode:mode];
     [overlayView setTitleLabelText:title];
+=======
+    overlayView.mode = mode;
+    overlayView.titleLabelText = title;
+>>>>>>> c2263bc6e764cf358997b4cc813a0dc9ea572b0e
     [view addSubview:overlayView];
     [overlayView show:animated];
     return overlayView;
